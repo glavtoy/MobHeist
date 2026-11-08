@@ -1,0 +1,115 @@
+template:
+  shop:
+    ==: Vector
+    x: 12.0
+    y: 0.0
+    z: 14.0
+  spawn:
+    ==: Vector
+    x: 12.5
+    y: 0.0
+    z: 17.5
+  spawn-yaw: 180.0
+  size: 25
+  door:
+    ==: Vector
+    x: 12.0
+    y: 0.0
+    z: 16.0
+  manager:
+    ==: Vector
+    x: 8.0
+    y: 0.0
+    z: 11.0
+  manager-pad:
+    ==: Vector
+    x: 8.0
+    y: 0.0
+    z: 15.0
+  income-pad:
+    ==: Vector
+    x: 16.0
+    y: 0.0
+    z: 15.0
+  luck-pad:
+    ==: Vector
+    x: 16.0
+    y: 0.0
+    z: 11.0
+  storage-pad:
+    ==: Vector
+    x: 12.0
+    y: 0.0
+    z: 8.0
+  rebirth-pad:
+    ==: Vector
+    x: 4.0
+    y: 0.0
+    z: 11.0
+  pen-pads:
+  - ==: Vector
+    x: 3.0
+    y: 0.0
+    z: 7.0
+  - ==: Vector
+    x: 9.0
+    y: 0.0
+    z: 7.0
+  - ==: Vector
+    x: 15.0
+    y: 0.0
+    z: 7.0
+  - ==: Vector
+    x: 21.0
+    y: 0.0
+    z: 7.0
+  - ==: Vector
+    x: 3.0
+    y: 0.0
+    z: 17.0
+  - ==: Vector
+    x: 9.0
+    y: 0.0
+    z: 17.0
+  - ==: Vector
+    x: 15.0
+    y: 0.0
+    z: 17.0
+  - ==: Vector
+    x: 21.0
+    y: 0.0
+    z: 17.0
+  pens:
+  - ==: Vector
+    x: 3.0
+    y: 0.0
+    z: 3.0
+  - ==: Vector
+    x: 9.0
+    y: 0.0
+    z: 3.0
+  - ==: Vector
+    x: 15.0
+    y: 0.0
+    z: 3.0
+  - ==: Vector
+    x: 21.0
+    y: 0.0
+    z: 3.0
+  - ==: Vector
+    x: 3.0
+    y: 0.0
+    z: 21.0
+  - ==: Vector
+    x: 9.0
+    y: 0.0
+    z: 21.0
+  - ==: Vector
+    x: 15.0
+    y: 0.0
+    z: 21.0
+  - ==: Vector
+    x: 21.0
+    y: 0.0
+    z: 21.0
+plots: []

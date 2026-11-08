@@ -1,0 +1,13 @@
+name: MobHeist
+version: '${project.version}'
+main: ru.glavtoy.mobheist.MobHeist
+author: glavtoy
+commands:
+  mobheist:
+permissions:
+  mobheist.money:
+    default: op
+  mobheist.plot:
+    default: op
+  mobheist.reload:
+    default: op

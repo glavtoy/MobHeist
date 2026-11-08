@@ -1,0 +1,122 @@
+chicken:
+  name: "&fКурица"
+  entity: CHICKEN
+  tier: 0
+  income: 1
+  price: 50
+pig:
+  name: "&fСвинья"
+  entity: PIG
+  tier: 0
+  income: 2
+  price: 120
+sheep:
+  name: "&fОвца"
+  entity: SHEEP
+  tier: 0
+  income: 3
+  price: 200
+cow:
+  name: "&fКорова"
+  entity: COW
+  tier: 0
+  income: 4
+  price: 300
+
+rabbit:
+  name: "&fКролик"
+  entity: RABBIT
+  tier: 1
+  income: 8
+  price: 700
+wolf:
+  name: "&fВолк"
+  entity: WOLF
+  tier: 1
+  income: 12
+  price: 1100
+llama:
+  name: "&fЛама"
+  entity: LLAMA
+  tier: 1
+  income: 15
+  price: 1500
+
+villager:
+  name: "&fЖитель"
+  entity: VILLAGER
+  tier: 2
+  income: 30
+  price: 3500
+snowman:
+  name: "&fСнеговик"
+  entity: SNOWMAN
+  tier: 2
+  income: 40
+  price: 5000
+polar_bear:
+  name: "&fБелый медведь"
+  entity: POLAR_BEAR
+  tier: 2
+  income: 50
+  price: 7000
+
+blaze:
+  name: "&fИфрит"
+  entity: BLAZE
+  tier: 3
+  income: 100
+  price: 15000
+witch:
+  name: "&fВедьма"
+  entity: WITCH
+  tier: 3
+  income: 130
+  price: 22000
+enderman:
+  name: "&fЭндермен"
+  entity: ENDERMAN
+  tier: 3
+  income: 160
+  price: 30000
+
+iron_golem:
+  name: "&fЖелезный голем"
+  entity: IRON_GOLEM
+  tier: 4
+  income: 400
+  price: 80000
+wither_skeleton:
+  name: "&fСкелет-иссушитель"
+  entity: WITHER_SKELETON
+  tier: 4
+  income: 600
+  price: 130000
+
+evoker:
+  name: "&fВызыватель"
+  entity: EVOKER
+  tier: 5
+  income: 1500
+  price: 400000
+elder_guardian:
+  name: "&fДревний страж"
+  entity: ELDER_GUARDIAN
+  tier: 5
+  income: 3000
+  price: 900000
+
+shulker:
+  name: "&dШалкер"
+  entity: SHULKER
+  tier: 5
+  income: 8000
+  price: 3000000
+  rebirth: 1
+vex:
+  name: "&dВредина"
+  entity: VEX
+  tier: 5
+  income: 20000
+  price: 10000000
+  rebirth: 2

@@ -1,0 +1,154 @@
+no-permission: "&cНедостаточно прав"
+players-only: "&cКоманда только для игроков"
+reloaded: "&aКонфиги перезагружены"
+
+usage:
+  plot-add: "&e/mobheist plot add &7- добавить участок, стоя в его углу"
+  plot-remove: "&e/mobheist plot remove &7- удалить ближайший участок"
+  plot-point: "&e/mobheist plot (точка) &7- отметить точку в шаблоне"
+  plot-pen: "&e/mobheist plot pen &7- добавить загон в шаблон"
+  plot-pen-pad: "&e/mobheist plot penpad &7- добавить плиту покупки загона по порядку"
+  plot-list: "&e/mobheist plot list &7- список участков"
+  reload: "&e/mobheist reload"
+  money: "&e/mobheist money (игрок) (сумма) &7- выдать деньги"
+
+money:
+  given: "&aИгроку {player} выдано {money} $"
+  no-base: "&cИгрок не в сети или у него нет базы"
+  wrong-amount: "&cСумма должна быть целым числом от 0"
+
+steal:
+  started: "&eНеси {mob} &eк своему свободному загону!"
+  carry: "&eНеси к свободному загону: &f{seconds} сек"
+  robbed: "&c{thief} крадет {mob}&c! Ударь вора или кликни по мобу"
+  robbed-title: "&c&lКража!"
+  robbed-subtitle: "&f{thief} уносит {mob}"
+  done: "&aТы украл {mob}&a!"
+  lost: "&c{thief} украл у тебя {mob}"
+  rescued: "&a{mob} &aвернулся домой"
+  rescued-thief: "&c{player} отбил {mob}"
+  timeout: "&cНе успел донести {mob}"
+  busy: "&cТы уже несешь моба"
+  locked: "&cБаза закрыта на замок"
+  no-pens: "&cНужен свободный загон, чтобы красть"
+  few-mobs: "&cУ этого игрока слишком мало мобов"
+  cooldown: "&cЭтого игрока недавно обокрали, подожди {seconds} сек"
+
+lock:
+  title: "&b&lЗамок"
+  ready: "&aНаступи, чтобы закрыть базу"
+  closed: "&cЗакрыто: {seconds} сек"
+  recharge: "&7Перезарядка: {seconds} сек"
+  locked: "&bБаза закрыта на {seconds} сек"
+  not-ready: "&cЗамок еще перезаряжается"
+  wall: "&cЭта база закрыта на замок"
+
+plot:
+  added: "&aУчасток #{number} добавлен"
+  removed: "&eУчасток #{number} удален"
+  lost: "&cТвой участок удален, перезайди, чтобы получить новый"
+  point-set: "&aТочка {point} отмечена по участку #{number}"
+  pen-added: "&aЗагон #{number} добавлен в шаблон"
+  pen-pad-added: "&aПлита загона #{number} добавлена в шаблон"
+  no-plots: "&cСначала добавь хотя бы один участок"
+  list: "&eУчастков: {count}"
+  list-entry: "&7#{number} - {owner}"
+  free: "свободен"
+  claimed: "&aТвой участок #{number}"
+  full: "&cСвободных участков нет"
+
+base:
+  bought: "&aКуплен {mob}"
+  bought-mutation: "&6Повезло! &aКуплен {mob}"
+  no-pens: "&cНет свободного загона, встань на плиту, чтобы купить новый"
+  mob-upgraded: "&a{mob} &aтеперь {level} уровня"
+  collected: "&6+{money} $"
+  auto-collected: "&6Менеджер собрал +{money} $"
+  mob-locked: "&cЭтот моб откроется после {rebirth} перерождения"
+  rebirth: "&6Ты переродился! Теперь доход навсегда x{multiplier}"
+  rebirth-title: "&6&lПерерождение!"
+  rebirth-subtitle: "&eДоход навсегда x{multiplier}"
+  sold: "&eПродан {mob} &eза &6{money} $"
+
+upgrade:
+  bought: "&aУлучшение куплено"
+  no-money: "&cНе хватает денег"
+  max: "&cМаксимальный уровень"
+
+pad:
+  pen: "&e&lНовый загон"
+  manager: "&e&lНанять менеджера"
+  manager-upgrade: "&e&lМенеджер быстрее"
+  income: "&e&lБольше дохода"
+  luck: "&d&lБольше удачи"
+  storage: "&b&lХранилище побольше"
+  pen-info: "&f+1 место для моба"
+  manager-info: "&fСобирает деньги каждые {seconds} сек"
+  income-info: "&fВсе мобы приносят x{multiplier}"
+  luck-info: "&fРедкие мобы чаще x{multiplier}"
+  storage-info: "&fМоб копит до {minutes} мин"
+  rebirth: "&6&lПерерождение"
+  rebirth-info: "&fДоход навсегда x{multiplier}"
+  price: "&a{price} $"
+  price-locked: "&c{price} $"
+
+hologram:
+  shop: "&e&lМагазин"
+  shop-hint: "&7Нажми ПКМ"
+  mob-name: "{mob} &7ур. {level}"
+  mob-income: "&6{stored} $ &7| &a+{income} $/сек"
+  mob-upgrade: "&aПКМ - улучшить за {price} $"
+  mob-upgrade-locked: "&cУлучшение: {price} $"
+  mob-max: "&6Максимальный уровень"
+  mob-stolen: "&c&lКрадут!"
+  manager: "&b&lМенеджер"
+
+menu:
+  shop:
+    title: "Магазин"
+    mob: "&f&l{mob}"
+    income: "&a+{income} $ в секунду"
+    price: "&aКупить за {price} $"
+    price-locked: "&cКупить за {price} $"
+    locked: "&cОткроется после {rebirth} перерождения"
+    money: "&aУ тебя {money} $"
+    money-lore:
+      - "&7Собирай деньги с мобов"
+      - "&7и покупай новых"
+  mob:
+    title: "Твой моб"
+    level: "&7Уровень {level} из {max}"
+    income: "&a+{income} $ в секунду"
+    collect: "&a&lСобрать деньги"
+    collect-lore:
+      - "&7Накоплено &6{stored} $"
+      - "&7Можно собрать и ударом по мобу"
+    upgrade: "&e&lУлучшить"
+    upgrade-max: "&aМаксимальный уровень"
+    upgrade-next: "&7Доход станет &a+{income} $"
+    upgrade-price: "&aУлучшить за {price} $"
+    upgrade-price-locked: "&cУлучшить за {price} $"
+    sell: "&c&lПродать"
+    sell-lore:
+      - "&7Получишь &6{money} $"
+      - "&7Загон освободится"
+  rebirth:
+    title: "Перерождение"
+    confirm: "&a&lПереродиться"
+    confirm-lore:
+      - "&7Мобы, деньги и улучшения пропадут"
+      - "&aДоход навсегда x{multiplier}"
+      - "&aОткроются новые мобы"
+    price: "&aЦена {price} $"
+    price-locked: "&cЦена {price} $"
+    cancel: "&c&lНе сейчас"
+    cancel-lore:
+      - "&7Вернуться к игре"
+
+hud:
+  title: "&a&lMobHeist"
+  money: "Деньги: &6{money} $"
+  income: "Доход: &a+{income} $/с"
+  pens: "Загоны: &f{mobs}/{pens}"
+  rebirths: "Перерождения: &f{rebirths}"
+  plot: "Участок: &f#{number}"

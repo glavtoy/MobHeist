@@ -1,0 +1,127 @@
+start-money: 100
+sell-percent: 50
+autosave-seconds: 60
+
+rarities:
+  - "&7Обычный"
+  - "&aНеобычный"
+  - "&9Редкий"
+  - "&5Эпический"
+  - "&6Легендарный"
+  - "&cМифический"
+
+mutations:
+  golden:
+    name: "&6Золотой"
+    chance: 0.05
+    multiplier: 2
+  diamond:
+    name: "&bАлмазный"
+    chance: 0.01
+    multiplier: 5
+
+mob-upgrade:
+  max-level: 1000
+  income-growth: 1.25
+  price-percent: 60
+  price-multiplier: 1.3
+
+progression:
+  - pen
+  - manager
+  - pen
+  - income
+  - storage
+  - pen
+  - manager
+  - luck
+  - pen
+  - income
+  - storage
+  - pen
+  - manager
+  - luck
+  - income
+  - storage
+  - manager
+  - luck
+  - income
+
+steal:
+  min-mobs: 3
+  cooldown-seconds: 300
+  carry-seconds: 60
+  lock-seconds: 60
+  lock-cooldown-seconds: 60
+
+rebirth:
+  price: 50000000
+  price-multiplier: 10
+  income-bonus: 1.0
+
+pens:
+  start: 3
+  price: 1000
+  price-multiplier: 5
+
+income:
+  1:
+    price: 0
+    multiplier: 1.0
+  2:
+    price: 10000
+    multiplier: 1.5
+  3:
+    price: 100000
+    multiplier: 2.0
+  4:
+    price: 1000000
+    multiplier: 3.0
+  5:
+    price: 10000000
+    multiplier: 5.0
+
+automation:
+  1:
+    price: 0
+    interval: 0
+  2:
+    price: 5000
+    interval: 60
+  3:
+    price: 50000
+    interval: 30
+  4:
+    price: 500000
+    interval: 10
+  5:
+    price: 5000000
+    interval: 3
+
+luck:
+  1:
+    price: 0
+    multiplier: 1.0
+  2:
+    price: 25000
+    multiplier: 2.0
+  3:
+    price: 250000
+    multiplier: 3.0
+  4:
+    price: 2500000
+    multiplier: 5.0
+
+storage:
+  1:
+    price: 0
+    seconds: 300
+  2:
+    price: 15000
+    seconds: 600
+  3:
+    price: 150000
+    seconds: 1200
+  4:
+    price: 1500000
+    seconds: 3600
