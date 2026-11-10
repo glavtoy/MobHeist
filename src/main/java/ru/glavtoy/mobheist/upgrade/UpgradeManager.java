@@ -95,9 +95,11 @@ public final class UpgradeManager {
     }
 
     public Step getNextStep(Base base) {
-        Map<Step, Integer> reached = new EnumMap<>(Step.class);
+        Map<Step, Integer> levels = new EnumMap<>(Step.class);
+        levels.put(Step.PEN, startPens);
         for (Step step : progression) {
-            int level = reached.merge(step, 1, Integer::sum) + (step == Step.PEN ? startPens : 1);
+            int level = levels.getOrDefault(step, 1) + 1;
+            levels.put(step, level);
             if (getLevel(base.getData(), step) < level && level <= getMaxLevel(base, step)) {
                 return step;
             }

@@ -113,23 +113,6 @@ public final class BaseManager {
         bases.forEach((player, base) -> saveAsync(player.getUniqueId(), base.getData()));
     }
 
-    private Base removeBase(Player player) {
-        Base base = bases.remove(player);
-        if (base != null) {
-            base.remove();
-            hud.remove(player);
-        }
-        return base;
-    }
-
-    private void saveAsync(UUID uuid, PlayerData data) {
-        saving.put(uuid, data);
-        mobHeist.getServer().getScheduler().runTaskAsynchronously(mobHeist, () -> {
-            storage.save(uuid, data);
-            saving.remove(uuid, data);
-        });
-    }
-
     public Collection<Base> getBases() {
         return bases.values();
     }
@@ -161,17 +144,17 @@ public final class BaseManager {
 
     public void usePad(Base base) {
         Step step = base.getPadStep();
+        if (step == null) {
+            return;
+        }
         if (step == Step.REBIRTH) {
-            PlayerData data = base.getData();
             RebirthMenu menu = new RebirthMenu(base, this, messages, upgradeManager.getPrice(base, step),
-                    upgradeManager.getRebirthMultiplier(data.getRebirths() + 1));
+                    upgradeManager.getRebirthMultiplier(base.getData().getRebirths() + 1));
             base.setMenu(menu);
             menu.open();
             return;
         }
-        if (step == null) {
-            return;
-        }
+
         UpgradePurchaseEvent event = new UpgradePurchaseEvent(base, step, upgradeManager.getPrice(base, step));
         mobHeist.getServer().getPluginManager().callEvent(event);
         if (event.isCancelled() || !upgradeManager.buy(base, step)) {
@@ -310,6 +293,10 @@ public final class BaseManager {
         mobHeist.getServer().getScheduler().runTask(mobHeist, () -> base.getOwner().closeInventory());
     }
 
+    public void actionBar(Player player, String text) {
+        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(text));
+    }
+
     public void collect(Base base, int pen) {
         OwnedMob mob = base.getData().getMobs().get(pen);
         if (mob.getStored() < 1) {
@@ -334,6 +321,23 @@ public final class BaseManager {
         data.setMoney(data.getMoney() + total);
         data.getMobs().values().forEach(mob -> mob.setStored(0));
         actionBar(base.getOwner(), messages.get("base.auto-collected").replace("{money}", Numbers.format(total)));
+    }
+
+    private Base removeBase(Player player) {
+        Base base = bases.remove(player);
+        if (base != null) {
+            base.remove();
+            hud.remove(player);
+        }
+        return base;
+    }
+
+    private void saveAsync(UUID uuid, PlayerData data) {
+        saving.put(uuid, data);
+        mobHeist.getServer().getScheduler().runTaskAsynchronously(mobHeist, () -> {
+            storage.save(uuid, data);
+            saving.remove(uuid, data);
+        });
     }
 
     private void tick() {
@@ -450,9 +454,5 @@ public final class BaseManager {
 
     private String toSeconds(long millis) {
         return String.valueOf(TimeUnit.MILLISECONDS.toSeconds(millis) + 1);
-    }
-
-    public void actionBar(Player player, String text) {
-        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(text));
     }
 }

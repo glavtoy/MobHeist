@@ -42,12 +42,8 @@ public final class StealManager {
     }
 
     public Player getThief(Entity entity) {
-        Theft theft = thefts.get(entity);
-        if (theft != null) {
-            return theft.getThief();
-        }
         return thefts.values().stream()
-                .filter(value -> value.getEntity().equals(entity))
+                .filter(theft -> theft.getThief().equals(entity) || theft.getEntity().equals(entity))
                 .map(Theft::getThief)
                 .findFirst()
                 .orElse(null);
@@ -60,8 +56,6 @@ public final class StealManager {
         }
 
         FileConfiguration config = mobHeist.getConfig();
-        long now = System.currentTimeMillis();
-        long wait = victim.getLastRobbed() + TimeUnit.SECONDS.toMillis(config.getLong("steal.cooldown-seconds")) - now;
         if (thefts.containsKey(thief)) {
             messages.send(thief, "steal.busy");
             return;
@@ -78,6 +72,8 @@ public final class StealManager {
             messages.send(thief, "steal.few-mobs");
             return;
         }
+        long now = System.currentTimeMillis();
+        long wait = victim.getLastRobbed() + TimeUnit.SECONDS.toMillis(config.getLong("steal.cooldown-seconds")) - now;
         if (wait > 0) {
             thief.sendMessage(messages.get("steal.cooldown").replace("{seconds}", String.valueOf(toSeconds(wait))));
             return;
